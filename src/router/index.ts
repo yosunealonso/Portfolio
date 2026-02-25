@@ -1,7 +1,9 @@
-import Home from "@/pages/home/Home.vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 
-
+import Home from "@/pages/home/Home.vue";
+import Works from "@/pages/works/Works.vue";
+import About from "@/pages/about/About.vue";
+import Contact from "@/pages/contact/Contact.vue";
 
 export const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -11,6 +13,21 @@ export const router = createRouter({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/works',
+      name: 'works',
+      component: Works
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: About
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact
     },
     {
       path: '/:patchMatch(.*)',

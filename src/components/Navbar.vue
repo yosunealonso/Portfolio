@@ -1,41 +1,100 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
-import { Home, Briefcase, User, Mail } from 'lucide-vue-next'
+import { ref } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
+import { Home, Briefcase, User, Mail, Menu, X } from 'lucide-vue-next'
+
+// Variable reactiva para abrir/cerrar menú móvil
+const isOpen = ref(false)
+
+// Saber qué ruta está activa
+const route = useRoute()
+
+// Función para cerrar menú al navegar
+const closeMenu = () => {
+  isOpen.value = false
+}
 </script>
 
 <template>
-  <nav class="flex justify-between items-center px-8 py-4 shadow-md">
+  <nav class="w-full border-b">
 
-    <h2 class="text-xl font-bold">
-      YA
-    </h2>
+    <div class="flex justify-between items-center px-6 py-4">
 
-    <div class="flex gap-6 items-center">
+      <!-- Logo / Nombre -->
+      <h1 class="text-xl font-bold">
+        Yosune Alonso
+      </h1>
 
-      <RouterLink to="/" class="flex items-center gap-2 hover:text-pink-400 transition">
-        <Home class="w-4 h-4" />
-        Inicio
-      </RouterLink>
+      <!-- Menú Desktop -->
+      <div class="hidden md:flex gap-8">
 
-      <RouterLink to="/works" class="flex items-center gap-2 hover:text-pink-400 transition">
-        <Briefcase class="w-4 h-4" />
-        Trabajos
-      </RouterLink>
+        <RouterLink
+          to="/"
+          @click="closeMenu"
+          :class="route.path === '/' ? 'text-pink-500 font-semibold' : 'hover:text-pink-400 transition'"
+        >
+          <div class="flex items-center gap-2">
+            <Home class="w-4 h-4" />
+            Inicio
+          </div>
+        </RouterLink>
 
-      <RouterLink to="/about" class="flex items-center gap-2 hover:text-pink-400 transition">
-        <User class="w-4 h-4" />
-        Sobre mí
-      </RouterLink>
+        <RouterLink
+          to="/works"
+          @click="closeMenu"
+          :class="route.path.startsWith('/works') ? 'text-pink-500 font-semibold' : 'hover:text-pink-400 transition'"
+        >
+          <div class="flex items-center gap-2">
+            <Briefcase class="w-4 h-4" />
+            Trabajos
+          </div>
+        </RouterLink>
 
-      <RouterLink to="/contact" class="flex items-center gap-2 hover:text-pink-400 transition">
-        <Mail class="w-4 h-4" />
-        Contacto
-      </RouterLink>
+        <RouterLink
+          to="/about"
+          @click="closeMenu"
+          :class="route.path.startsWith('/about') ? 'text-pink-500 font-semibold' : 'hover:text-pink-400 transition'"
+        >
+          <div class="flex items-center gap-2">
+            <User class="w-4 h-4" />
+            Sobre mí
+          </div>
+        </RouterLink>
+
+        <RouterLink
+          to="/contact"
+          @click="closeMenu"
+          :class="route.path.startsWith('/contact') ? 'text-pink-500 font-semibold' : 'hover:text-pink-400 transition'"
+        >
+          <div class="flex items-center gap-2">
+            <Mail class="w-4 h-4" />
+            Contacto
+          </div>
+        </RouterLink>
+
+      </div>
+
+      <!-- Botón hamburguesa (solo móvil) -->
+      <button
+        class="md:hidden"
+        @click="isOpen = !isOpen"
+      >
+        <Menu v-if="!isOpen" />
+        <X v-else />
+      </button>
 
     </div>
+
+    <!-- Menú móvil -->
+    <div
+      v-if="isOpen"
+      class="flex flex-col gap-4 px-6 pb-6 md:hidden"
+    >
+      <RouterLink to="/" @click="closeMenu">Inicio</RouterLink>
+      <RouterLink to="/works" @click="closeMenu">Trabajos</RouterLink>
+      <RouterLink to="/about" @click="closeMenu">Sobre mí</RouterLink>
+      <RouterLink to="/contact" @click="closeMenu">Contacto</RouterLink>
+    </div>
+
   </nav>
 </template>
-
-<style>
-
-</style>

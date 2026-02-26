@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue'
 import { works } from '@/data/works'
 import { Card, CardContent } from '@/components/ui/card'
+import { RouterLink } from 'vue-router'
 
 const selectedArea = ref<'todas' | string>('todas')
 
@@ -44,11 +45,12 @@ const filteredWorks = computed(() => {
     <!-- Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <Card
+      <RouterLink
         v-for="work in filteredWorks"
         :key="work.id"
-        class="cursor-pointer hover:shadow-xl transition"
+        :to="`/works/${work.id}`"
       >
+      <Card class="cursor-pointer hover:shadow-xl transition">
         <CardContent class="p-4">
 
           <img
@@ -66,7 +68,8 @@ const filteredWorks = computed(() => {
           </p>
 
         </CardContent>
-      </Card>
+        </Card>
+    </RouterLink>
 
     </div>
 

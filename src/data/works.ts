@@ -84,7 +84,7 @@ export const works: Work[] = [
     title: "La niña que fui",
     description: "Proyecto personal",
     area: "arte",
-    image: "/images/niña.jpg"
+    image: "/images/nina.jpg"
   },
   {
     id: 12,

@@ -2,8 +2,8 @@
 </script>
 
 <template>
-  <section class="p-10">
-    <h1 class="text-4xl font-bold">Contacto</h1>
+  <section class="px-6 py-12">
+    <h1 class="text-4xl font-bold mb-8">Contacto</h1>
   </section>
 </template>
 

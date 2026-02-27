@@ -1,8 +1,16 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed} from 'vue'
 import { works } from '@/data/works'
 import { Card, CardContent } from '@/components/ui/card'
 import { RouterLink } from 'vue-router'
+
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationNext,
+  PaginationPrevious,
+} from '@/components/ui/pagination'
 
 const selectedArea = ref<'todas' | string>('todas')
 
@@ -12,6 +20,20 @@ const filteredWorks = computed(() => {
   }
   return works.filter(work => work.area === selectedArea.value)
 })
+
+const itemsPerPage = 6
+const currentPage = ref(1)
+
+const totalPages = computed(() =>
+  Math.ceil(filteredWorks.value.length / itemsPerPage)
+)
+
+const paginatedWorks = computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage
+  const end = start + itemsPerPage
+  return filteredWorks.value.slice(start, end)
+})
+
 </script>
 
 <template>
@@ -46,7 +68,7 @@ const filteredWorks = computed(() => {
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
       <RouterLink
-        v-for="work in filteredWorks"
+        v-for="work in paginatedWorks"
         :key="work.id"
         :to="`/works/${work.id}`"
       >
@@ -72,6 +94,29 @@ const filteredWorks = computed(() => {
     </RouterLink>
 
     </div>
+
+    <Pagination
+  v-model:page="currentPage"
+  :itemsPerPage="itemsPerPage"
+  :total="filteredWorks.length"
+  class="mt-12 flex justify-center"
+>
+  <PaginationContent>
+
+    <PaginationPrevious />
+
+    <PaginationItem
+      v-for="page in totalPages"
+      :key="page"
+      :value="page"
+    >
+      {{ page }}
+    </PaginationItem>
+
+    <PaginationNext />
+
+  </PaginationContent>
+</Pagination>
 
   </section>
 </template>

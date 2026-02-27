@@ -31,7 +31,7 @@ const props = defineProps<Props>()
         :key="index"
       >
         <Card class="border-none shadow-none">
-          <CardContent class="p-0 aspect-video">
+          <CardContent class="p-0 aspect-4/3">
             <img
               :src="`${props.basePath}/${photo}.jpg`"
               :alt="`Image ${index + 1}`"

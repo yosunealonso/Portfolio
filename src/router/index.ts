@@ -5,6 +5,9 @@ import Works from "@/pages/works/Works.vue";
 import About from "@/pages/about/About.vue";
 import Contact from "@/pages/contact/Contact.vue";
 import WorkDetail from '@/pages/works/WorkDetail.vue'
+import Bio from "@/pages/about/Bio.vue";
+import Skills from "@/pages/about/Skills.vue";
+
 
 export const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -27,8 +30,11 @@ export const router = createRouter({
     },
     {
       path: '/about',
-      name: 'about',
-      component: About
+      component: About,
+      children: [
+        { path: 'bio', component: Bio },
+        { path: 'skills', component: Skills },
+      ]
     },
     {
       path: '/contact',

@@ -16,14 +16,16 @@ const closeMenu = () => {
 </script>
 
 <template>
-  <nav class="w-full border-b">
+  <nav class="sticky top-0 z-50 w-full bg-white border-b">
 
     <div class="flex justify-between items-center px-6 py-4">
 
-      <!-- Logo / Nombre -->
-      <h1 class="text-xl font-bold">
+        <RouterLink
+        to="/"
+        class="text-xl font-bold hover:opacity-70 transition"
+        >
         Yosune Alonso
-      </h1>
+        </RouterLink>
 
       <!-- Menú Desktop -->
       <div class="hidden md:flex gap-8">

@@ -2,6 +2,7 @@
 import { useRoute } from 'vue-router'
 import { works } from '@/data/works'
 import { computed } from 'vue'
+import WorkCarousel from '@/components/WorkCarousel.vue'
 
 const route = useRoute()
 
@@ -14,11 +15,10 @@ const work = computed(() => {
 <template>
   <section class="px-6 py-12" v-if="work">
 
-    <img
-      :src="work.image"
-      :alt="work.title"
-      class="w-full max-h-[400px] object-cover rounded-xl mb-8"
-    />
+    <WorkCarousel
+  :photos="work.images"
+  basePath="/images"
+  />
 
     <h1 class="text-4xl font-bold mb-4">
       {{ work.title }}

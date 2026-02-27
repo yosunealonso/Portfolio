@@ -50,13 +50,13 @@ const filteredWorks = computed(() => {
         :key="work.id"
         :to="`/works/${work.id}`"
       >
-      <Card class="cursor-pointer hover:shadow-xl transition">
+      <Card class=" bg-orange-50 cursor-pointer rounded-md hover:shadow-xl transform transition duration-300 hover:rotate-3">
         <CardContent class="p-4">
 
           <img
             :src="work.image"
             :alt="work.title"
-            class="w-full h-48 object-cover rounded-lg mb-4"
+            class="w-full h-100 object-cover rounded-lg mb-4"
           />
 
           <h2 class="text-xl font-semibold">

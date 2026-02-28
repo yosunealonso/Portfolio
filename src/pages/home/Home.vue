@@ -9,7 +9,7 @@
     </h1>
 
     <p class="text-lg md:text-2xl text-gray-500 max-w-xl">
-      Diseño y Tecnologías Creativas
+      Portfolio - Diseño e ilustración
     </p>
 
   </section>

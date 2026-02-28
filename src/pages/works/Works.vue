@@ -3,6 +3,7 @@ import { ref, computed} from 'vue'
 import { works } from '@/data/works'
 import { Card, CardContent } from '@/components/ui/card'
 import { RouterLink } from 'vue-router'
+import { useRoute } from 'vue-router'
 
 import {
   Pagination,
@@ -12,7 +13,7 @@ import {
   PaginationPrevious,
 } from '@/components/ui/pagination'
 
-const selectedArea = ref<'todas' | string>('todas')
+const selectedArea = ref<'diseño' | string>('diseño')
 
 const filteredWorks = computed(() => {
   if (selectedArea.value === 'todas') {
@@ -34,6 +35,16 @@ const paginatedWorks = computed(() => {
   return filteredWorks.value.slice(start, end)
 })
 
+const route = useRoute()
+
+if (route.query.area) {
+  selectedArea.value = route.query.area as string
+}
+
+if (route.query.page) {
+  currentPage.value = Number(route.query.page)
+}
+
 </script>
 
 <template>
@@ -44,33 +55,40 @@ const paginatedWorks = computed(() => {
     <!-- Filtros -->
     <div class="flex flex-wrap gap-4 mb-10">
 
+      
       <button
-        @click="selectedArea = 'todas'"
-        class="px-4 py-2 border rounded-lg"
-        :class="selectedArea === 'todas' ? 'bg-black text-white' : ''"
+      v-for="area in ['diseño','ilustración','proyectos','arte']"
+      :key="area"
+      @click="selectedArea = area"
+      class="px-4 py-2 border rounded-lg capitalize"
+      :class="selectedArea === area ? 'bg-black text-white' : ''"
       >
-        Todas
-      </button>
-
-      <button
-        v-for="area in ['diseño','ilustración','proyectos','arte']"
-        :key="area"
-        @click="selectedArea = area"
-        class="px-4 py-2 border rounded-lg capitalize"
-        :class="selectedArea === area ? 'bg-black text-white' : ''"
-      >
-        {{ area }}
-      </button>
-
-    </div>
-
-    <!-- Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
+      {{ area }}
+    </button>
+    
+    <button
+      @click="selectedArea = 'todas'"
+      class="px-4 py-2 border rounded-lg"
+      :class="selectedArea === 'todas' ? 'bg-black text-white' : ''"
+    >
+      Todas
+    </button>
+  </div>
+  
+  <!-- Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    
       <RouterLink
         v-for="work in paginatedWorks"
         :key="work.id"
-        :to="`/works/${work.id}`"
+        :to="{
+          name: 'work-detail',
+          params: { id: work.id },
+          query: {
+          area: selectedArea,
+          page: currentPage
+  }
+}"
       >
       <Card class=" bg-orange-50 cursor-pointer rounded-md hover:shadow-xl transform transition duration-300 hover:rotate-3">
         <CardContent class="p-4">

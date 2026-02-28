@@ -35,7 +35,7 @@ const props = defineProps<Props>()
             <img
               :src="`${props.basePath}/${photo}.jpg`"
               :alt="`Image ${index + 1}`"
-              class="w-full h-full object-cover rounded-xl"
+              class="w-full h-1xl object-cover rounded-xl"
             />
           </CardContent>
         </Card>

@@ -53,7 +53,7 @@ const closeMenu = () => {
         </RouterLink>
 
         <RouterLink
-          to="/about"
+          to="/about/bio"
           @click="closeMenu"
           :class="route.path.startsWith('/about') ? 'text-pink-500 font-semibold' : 'hover:text-pink-400 transition'"
         >

@@ -16,7 +16,7 @@ import { RouterLink, RouterView } from 'vue-router'
         class="text-gray-600 hover:text-black transition"
         active-class="font-bold text-black border-b-2 border-black pb-1"
       >
-        Bio
+        ¿Quién soy?
       </RouterLink>
 
       <RouterLink
@@ -24,7 +24,7 @@ import { RouterLink, RouterView } from 'vue-router'
         class="text-gray-600 hover:text-black transition"
         active-class="font-bold text-black border-b-2 border-black pb-1"
       >
-        Skills
+        Habilidades
       </RouterLink>
       
     </div>

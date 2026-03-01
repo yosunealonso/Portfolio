@@ -22,7 +22,7 @@ const filteredWorks = computed(() => {
   return works.filter(work => work.area === selectedArea.value)
 })
 
-const itemsPerPage = 6
+const itemsPerPage = 8
 const currentPage = ref(1)
 
 const totalPages = computed(() =>
@@ -76,7 +76,7 @@ if (route.query.page) {
   </div>
   
   <!-- Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
     
       <RouterLink
         v-for="work in paginatedWorks"
@@ -90,20 +90,32 @@ if (route.query.page) {
   }
 }"
       >
-      <Card class=" bg-orange-50 cursor-pointer rounded-md hover:shadow-xl transform transition duration-300 hover:rotate-3">
+      <Card class="
+       bg-orange-50 
+       cursor-pointer 
+       rounded-md 
+       hover:shadow-xl 
+       transform 
+       transition 
+       duration-300 
+       hover:rotate-3
+       h-full
+       flex 
+       flex-col"
+       >
         <CardContent class="p-4">
 
           <img
             :src="work.image"
             :alt="work.title"
-            class="w-full h-100 object-cover rounded-lg mb-4"
+            class="w-full aspect-[5/4] object-cover rounded-lg mb-4"
           />
 
           <h2 class="text-xl font-semibold">
             {{ work.title }}
           </h2>
 
-          <p class="text-gray-500 text-sm">
+          <p class="text-gray-500 text-sm truncate w-full">
             {{ work.description }}
           </p>
 

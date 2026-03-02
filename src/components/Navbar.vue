@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
-import { Home, Briefcase, User, Mail, Menu, X } from 'lucide-vue-next'
+import { Turntable, Layers, Rainbow, WandSparkles, Menu, X } from 'lucide-vue-next'
 
 // Variable reactiva para abrir/cerrar menú móvil
 const isOpen = ref(false)
-
-// Saber qué ruta está activa
 const route = useRoute()
 
 // Función para cerrar menú al navegar
@@ -17,86 +15,112 @@ const closeMenu = () => {
 
 <template>
   <nav class="sticky top-0 z-50 w-full bg-white border-b">
-
-    <div class="flex justify-between items-center px-6 py-4">
+    <div class="flex justify-between items-center px-6 py-1">
 
         <RouterLink
-        to="/"
-        class="text-xl font-bold hover:opacity-70 transition"
-        >
-        Yosune Alonso
+        to="/" @click="closeMenu">
+        <img src="/images/logo.jpg" alt="Logo" class="h-12" />
         </RouterLink>
 
       <!-- Menú Desktop -->
-      <div class="hidden md:flex gap-8">
-
+      <div class="hidden md:flex gap-3">
         <RouterLink
           to="/"
           @click="closeMenu"
-          :class="route.path === '/' ? 'text-pink-500 font-semibold' : 'hover:text-pink-400 transition'"
+          :class="[
+            'flex items-center gap-2 px-2 py-1.5 rounded text-white transition',
+            route.path === '/' ? ' bg-blue-900' : 'font-normal bg-blue-700 hover:bg-blue-800'
+          ]"
+          style="font-family: Arial, sans-serif"
         >
-          <div class="flex items-center gap-2">
-            <Home class="w-4 h-4" />
-            Inicio
-          </div>
+          <Turntable class="w-4 h-4" />
+          Inicio
         </RouterLink>
 
         <RouterLink
           to="/works"
           @click="closeMenu"
-          :class="route.path.startsWith('/works') ? 'text-pink-500 font-semibold' : 'hover:text-pink-400 transition'"
+          :class="[
+            'flex items-center gap-2 px-3 py-1.5 rounded text-white transition',
+            route.path.startsWith('/works') ? ' bg-blue-900' : 'font-normal bg-blue-700 hover:bg-blue-800'
+          ]"
+          style="font-family: Arial, sans-serif"
         >
-          <div class="flex items-center gap-2">
-            <Briefcase class="w-4 h-4" />
-            Trabajos
-          </div>
+          <Layers class="w-4 h-4" />
+          Trabajos
         </RouterLink>
 
         <RouterLink
           to="/about/bio"
           @click="closeMenu"
-          :class="route.path.startsWith('/about/bio') ? 'text-pink-500 font-semibold' : 'hover:text-pink-400 transition'"
+          :class="[
+            'flex items-center gap-2 px-3 py-1.5 rounded text-white transition',
+            route.path.startsWith('/about/bio') ? ' bg-blue-800' : 'font-normal bg-blue-700 hover:bg-blue-800'
+          ]"
+          style="font-family: Arial, sans-serif"
         >
-          <div class="flex items-center gap-2">
-            <User class="w-4 h-4" />
-            Sobre mí
-          </div>
+          <Rainbow class="w-4 h-4" />
+          Sobre mí
         </RouterLink>
 
         <RouterLink
           to="/contact"
           @click="closeMenu"
-          :class="route.path.startsWith('/contact') ? 'text-pink-500 font-semibold' : 'hover:text-pink-400 transition'"
+          :class="[
+            'flex items-center gap-2 px-3 py-1.5 rounded text-white transition',
+            route.path.startsWith('/contact') ? ' bg-blue-800' : 'font-normal bg-blue-700 hover:bg-blue-800'
+          ]"
+          style="font-family: Arial, sans-serif"
         >
-          <div class="flex items-center gap-2">
-            <Mail class="w-4 h-4" />
-            Contacto
-          </div>
+          <WandSparkles class="w-4 h-4" />
+          Contacto
         </RouterLink>
-
       </div>
 
       <!-- Botón hamburguesa (solo móvil) -->
       <button
-        class="md:hidden"
+        class="md:hidden text-blue-800"
         @click="isOpen = !isOpen"
       >
         <Menu v-if="!isOpen" />
         <X v-else />
       </button>
-
     </div>
 
     <!-- Menú móvil -->
-    <div
-      v-if="isOpen"
-      class="flex flex-col gap-4 px-6 pb-6 md:hidden"
-    >
-      <RouterLink to="/" @click="closeMenu">Inicio</RouterLink>
-      <RouterLink to="/works" @click="closeMenu">Trabajos</RouterLink>
-      <RouterLink to="/about" @click="closeMenu">Sobre mí</RouterLink>
-      <RouterLink to="/contact" @click="closeMenu">Contacto</RouterLink>
+    <div v-if="isOpen" class="flex flex-col gap-2 px-6 pb-6 md:hidden">
+      <RouterLink
+        to="/"
+        @click="closeMenu"
+        class="flex items-center gap-2 px-4 py-2 rounded text-blue-800 hover:text-blue-700 transition"
+      >
+        <Turntable class="w-4 h-4" />
+        Inicio
+      </RouterLink>
+      <RouterLink
+        to="/works"
+        @click="closeMenu"
+        class="flex items-center gap-2 px-4 py-2 rounded text-blue-800 hover:text-blue-700 transition"
+      >
+        <Layers class="w-4 h-4" />
+        Trabajos
+      </RouterLink>
+      <RouterLink
+        to="/about/bio"
+        @click="closeMenu"
+        class="flex items-center gap-2 px-4 py-2 rounded text-blue-800 hover:text-blue-700 transition"
+      >
+        <Rainbow class="w-4 h-4" />
+        Sobre mí
+      </RouterLink>
+      <RouterLink
+        to="/contact"
+        @click="closeMenu"
+        class="flex items-center gap-2 px-4 py-2 rounded text-blue-800 hover:text-blue-700 transition"
+      >
+        <WandSparkles class="w-4 h-4" />
+        Contacto
+      </RouterLink>
     </div>
-
   </nav>
 </template>

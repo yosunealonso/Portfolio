@@ -50,7 +50,7 @@ if (route.query.page) {
 <template>
   <section class="px-6 py-12">
 
-    <h1 class="text-4xl font-bold mb-8">Trabajos</h1>
+    <h1 class="nombre text-7xl text-blue-800 mb-4">Trabajos</h1>
 
     <!-- Filtros -->
     <div class="flex flex-wrap gap-4 mb-10">
@@ -170,5 +170,12 @@ if (route.query.page) {
   </section>
 </template>
 
-<style>
+<style scoped>
+
+.nombre {
+  font-family: 'bookeyed-jack', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 </style>

@@ -11,13 +11,13 @@ import { works } from '@/data/works'
     <div class="flex flex-col items-center justify-between h-full w-full pt-40 pb-10">
 
       <div class="text-center w-full">
-        <p class="portfolio block text-2xl text-blue-800 tracking-wide font-sans">
-          Portfolio diseño e ilustración
+        <p class="portfolio block text-2xl text-blue-800 tracking-wide font-sans hover:text-pink-200 ">
+          Portfolio de diseño e ilustración
         </p>
       </div>
 
       <div class="flex-1 flex items-center justify-center w-full">
-        <h1 class="nombre block text-[30vw] sm:text-[30vw] md:text-[20vw] leading-none text-blue-800 text-center">
+        <h1 class="nombre block text-[30vw] sm:text-[30vw] md:text-[20vw] leading-none text-blue-800 text-center hover:text-pink-200">
         Yosune Alonso
         </h1>
       </div>
@@ -30,7 +30,7 @@ import { works } from '@/data/works'
         <div
           v-for="work in works"
           :key="'first-' + work.id"
-          class="shrink-0 w-45 lg:w-50"
+          class="aspect-3-4 shrink-0 w-40 lg:w-50"
         >
           <img
             :src="work.image"

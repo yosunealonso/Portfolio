@@ -85,44 +85,63 @@ if (route.query.page) {
           name: 'work-detail',
           params: { id: work.id },
           query: {
-          area: selectedArea,
-          page: currentPage
-  }
-}"
+            area: selectedArea,
+            page: currentPage
+          }
+        }"
+        class="group relative overflow-hidden rounded-sm"
       >
-      <Card class="
-       bg-orange-50 
-       cursor-pointer 
-       rounded-md 
-       hover:shadow-xl 
-       transform 
-       transition 
-       duration-300 
-       hover:rotate-3
-       h-full
-       flex 
-       flex-col"
-       >
-        <CardContent class="p-4">
 
-          <img
-            :src="work.image"
-            :alt="work.title"
-            class="w-full aspect-[5/4] object-cover rounded-lg mb-4"
-          />
+        <!-- Imagen -->
+        <img
+          :src="work.image"
+          :alt="work.title"
+          class="
+            w-full 
+            aspect-[4/5] 
+            object-cover 
+            transition-all 
+            duration-500 
+            group-hover:scale-110
+          "
+        />
 
-          <h2 class="text-xl font-semibold">
+        <!-- Overlay oscuro -->
+        <div
+          class="
+            absolute inset-0 
+            bg-black/0 
+            transition-all 
+            duration-500 
+            group-hover:bg-black/60
+          "
+        ></div>
+
+        <!-- Texto centrado -->
+        <div
+          class="
+            absolute inset-0 
+            flex flex-col 
+            items-center 
+            justify-center 
+            text-center 
+            px-4
+            opacity-0 
+            transition-all 
+            duration-500 
+            group-hover:opacity-100
+          "
+        >
+          <h2 class="text-white text-lg font-semibold">
             {{ work.title }}
           </h2>
 
-          <p class="text-gray-500 text-sm truncate w-full">
+          <p class="text-white text-sm mt-2">
             {{ work.description }}
           </p>
+        </div>
 
-        </CardContent>
-        </Card>
-    </RouterLink>
-
+      </RouterLink>
     </div>
 
     <Pagination

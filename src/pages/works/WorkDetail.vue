@@ -30,7 +30,9 @@ const goBack = () => {
 </script>
 
 <template>
-  <section class="px-6 py-12" v-if="work">
+  <section 
+  class="px-6 py-12" v-if="work"
+  style="background-image: url('/images/fondo.jpg')";>
 
     <button
       @click="goBack"

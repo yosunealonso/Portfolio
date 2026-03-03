@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
-import { Turntable, Layers, Rainbow, WandSparkles, Menu, X } from 'lucide-vue-next'
+import { Menu, X } from 'lucide-vue-next'
 
 // Variable reactiva para abrir/cerrar menú móvil
 const isOpen = ref(false)
@@ -28,12 +28,11 @@ const closeMenu = () => {
           to="/"
           @click="closeMenu"
           :class="[
-            'flex items-center gap-2 px-2 py-1.5 rounded text-white transition',
+            'flex items-center gap-2 px-2 py-1.5 rounded text-base text-white transition',
             route.path === '/' ? ' bg-blue-900' : 'font-normal bg-blue-700 hover:bg-blue-800'
           ]"
           style="font-family: Arial, sans-serif"
         >
-          <Turntable class="w-4 h-4" />
           Inicio
         </RouterLink>
 
@@ -41,12 +40,11 @@ const closeMenu = () => {
           to="/works"
           @click="closeMenu"
           :class="[
-            'flex items-center gap-2 px-3 py-1.5 rounded text-white transition',
+            'flex items-center gap-2 px-3 py-1.5 rounded text-base text-white transition',
             route.path.startsWith('/works') ? ' bg-blue-900' : 'font-normal bg-blue-700 hover:bg-blue-800'
           ]"
           style="font-family: Arial, sans-serif"
         >
-          <Layers class="w-4 h-4" />
           Trabajos
         </RouterLink>
 
@@ -54,12 +52,11 @@ const closeMenu = () => {
           to="/about/bio"
           @click="closeMenu"
           :class="[
-            'flex items-center gap-2 px-3 py-1.5 rounded text-white transition',
+            'flex items-center gap-2 px-3 py-1.5 rounded text-base text-white transition',
             route.path.startsWith('/about/bio') ? ' bg-blue-800' : 'font-normal bg-blue-700 hover:bg-blue-800'
           ]"
           style="font-family: Arial, sans-serif"
         >
-          <Rainbow class="w-4 h-4" />
           Sobre mí
         </RouterLink>
 
@@ -67,12 +64,11 @@ const closeMenu = () => {
           to="/contact"
           @click="closeMenu"
           :class="[
-            'flex items-center gap-2 px-3 py-1.5 rounded text-white transition',
+            'flex items-center gap-2 px-3 py-1.5 rounded text-base text-white transition',
             route.path.startsWith('/contact') ? ' bg-blue-800' : 'font-normal bg-blue-700 hover:bg-blue-800'
           ]"
           style="font-family: Arial, sans-serif"
         >
-          <WandSparkles class="w-4 h-4" />
           Contacto
         </RouterLink>
       </div>

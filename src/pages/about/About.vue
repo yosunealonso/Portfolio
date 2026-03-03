@@ -3,8 +3,11 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-<section class="px-6 py-12">
-    <h1 class="text-4xl font-bold mb-8"">
+<section 
+class="px-6 py-12"
+style="background-image: url('/images/fondo.jpg');"">
+  
+    <h1 class="nombre text-7xl text-blue-800 mb-4">
       Sobre mí
     </h1>
 
@@ -34,5 +37,12 @@ import { RouterLink, RouterView } from 'vue-router'
   </section>
 </template>
 
-<style>
+<style scoped>
+
+.nombre {
+  font-family: 'bookeyed-jack', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 </style>

@@ -48,7 +48,9 @@ if (route.query.page) {
 </script>
 
 <template>
-  <section class="px-6 py-12">
+  <section 
+  class="px-6 py-12"
+  style="background-image: url('/images/fondo.jpg')";>
 
     <h1 class="nombre text-7xl text-blue-800 mb-4">Trabajos</h1>
 

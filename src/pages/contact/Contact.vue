@@ -19,9 +19,11 @@ const selectedSubject = ref('')
 </script>
 
 <template>
-  <section class="px-6 py-12 min-h-screen flex flex-col">
+  <section 
+  class="px-6 py-12 min-h-screen flex flex-col"
+  style="background-image: url('/images/fondo.jpg')";>
 
-    <h1 class="text-4xl font-bold mb-8">Contacto</h1>
+    <h1 class="nombre text-7xl text-blue-800 mb-4">Contacto</h1>
 
     <div class="flex flex-col-reverse lg:flex-row md:flex-col-reverse flex-1 gap-12 ">
 
@@ -135,5 +137,12 @@ const selectedSubject = ref('')
   </section>
 </template>
 
-<style>
+<style scoped>
+
+.nombre {
+  font-family: 'bookeyed-jack', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 </style>

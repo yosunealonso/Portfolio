@@ -11,7 +11,7 @@ import { works } from '@/data/works'
     <div class="flex flex-col items-center justify-between h-full w-full pt-40 pb-10">
 
       <div class="text-center w-full">
-        <p class="portfolio block text-2xl text-blue-800 tracking-wide font-sans hover:text-pink-200 ">
+        <p class="portfolio block text-2xl text-blue-800 tracking-wide font-sans">
           Portfolio de diseño e ilustración
         </p>
       </div>

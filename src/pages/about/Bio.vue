@@ -6,9 +6,9 @@
       <!-- foto -->
       <div class="lg:w-1/2">
         <img
-          src="/images/mifoto.jpeg"
+          src="/images/mifoto.png"
           alt="Foto personal"
-          class="w-full rounded-xl object-cover"
+          class="w-full rounded-xl object-cover hover:scale-110 hover:rotate-3 transition"
         />
       </div>
 
@@ -19,21 +19,24 @@
         <div class="space-y-8 text-gray-700 leading-relaxed">
 
           <div>
-            <h2 class="text-2xl font-bold mb-3">Hola</h2>
+            <h2 class="text-2xl font-bold mb-3 text-blue-800">Hola!</h2>
             <p>
-              Soy diseñadora interesada en la narrativa visual,
-              la ilustración y el diseño gráfico. Me interesa cómo
-              el diseño puede generar emoción y memoria.
+              Soy Yosune - una estudiante de diseño interesada en la identidad visual,
+              la ilustración, el diseño gráfico y las artes visuales. Me apasiona la dirección 
+              de arte y el diseño relacionado con la industria musical, y me encantaría trabajar 
+              en este campo.
             </p>
           </div>
 
           <div>
-            <h2 class="text-2xl font-bold mb-3">Educación</h2>
+            <h2 class="text-2xl font-bold mb-3 text-blue-800">Educación</h2>
             <p>
-              Actualmente estudio Diseño y Tecnologías Creativas
+              Actualmente estudio segundo año de Diseño y Tecnologías Creativas
               en la Universitat Politècnica de València.
-              Desarrollo proyectos enfocados en identidad,
-              comunicación visual y experiencias.
+              A lo largo de la carrera he podido explorar múltiples áreas del diseño como:
+              Teoría del color, dibujo técnico y anatómico, ilustración aplicada a múltiples contextos,
+              modelado 3D, fotografía, producción audiovisual, estrategias de comunicación, 
+              programación y animación digital.
             </p>
           </div>
 

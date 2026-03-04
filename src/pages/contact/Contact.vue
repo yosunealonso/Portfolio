@@ -35,19 +35,19 @@ const selectedSubject = ref('')
           <form class="space-y-6 bg-white p-8 rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl">
             
             <!-- Nombre -->
-            <div class="space-y-2">
+            <div class="space-y-2 text-blue-800">
               <Label for="nombre">Nombre</Label>
               <Input id="nombre" required />
             </div>
             
             <!-- Email -->
-            <div class="space-y-2">
+            <div class="space-y-2 text-blue-800">
               <Label for="email">Email</Label>
               <Input id="email" type="email" required />
             </div>
             
             <!-- Asunto -->
-            <div class="space-y-2">
+            <div class="space-y-2 text-blue-800">
               <Label>Motivo</Label>
               <Select v-model="selectedSubject" required>
                 <SelectTrigger>
@@ -71,7 +71,7 @@ const selectedSubject = ref('')
             </div>
             
             <!-- Mensaje -->
-            <div class="space-y-2">
+            <div class="space-y-2 text-blue-800">
               <Label for="mensaje">Mensaje</Label>
               <Textarea
               id="mensaje"
@@ -83,7 +83,7 @@ const selectedSubject = ref('')
             <!-- Botón -->
             <Button
             type="submit"
-            class="w-full bg-pink-500 hover:bg-pink-600 text-white transition-all duration-300"
+            class="w-full hover:bg-[#f0b1c3] bg-[#e3849f] text-white transition-all duration-300"
             >
             Enviar mensaje
           </Button>
@@ -100,8 +100,8 @@ const selectedSubject = ref('')
         target="_blank"
         class="font-medium group flex items-center gap-4 transition-all duration-300"
       >
-        <Instagram class="w-6 h-6 transition-all duration-300 group-hover:text-pink-500 group-hover:-translate-y-1" />
-        <span class="transition-all duration-300 group-hover:text-pink-500 group-hover:translate-x-1">
+        <Instagram class="w-6 h-6 transition-all duration-300 group-hover:text-[#f0b1c3] group-hover:-translate-y-1" />
+        <span class="transition-all duration-300 group-hover:text-[#f0b1c3] group-hover:translate-x-1">
           @png.not.found
         </span>
       </a>
@@ -112,10 +112,10 @@ const selectedSubject = ref('')
         target="_blank"
         class="font-medium group flex items-center gap-4 transition-all duration-300"
       >
-        <div class="w-6 h-6 flex items-center justify-center border rounded text-sm font-bold transition-all duration-300 group-hover:text-pink-500 group-hover:border-pink-500 group-hover:-translate-y-1">
+        <div class="w-6 h-6 flex items-center justify-center border rounded text-sm font-bold transition-all duration-300 group-hover:text-[#f0b1c3] group-hover:-translate-y-1">
           Be
         </div>
-        <span class="transition-all duration-300 group-hover:text-pink-500 group-hover:translate-x-1">
+        <span class="transition-all duration-300 group-hover:text-[#f0b1c3] group-hover:translate-x-1">
           behance.net/yosunealonso1
         </span>
       </a>
@@ -125,8 +125,8 @@ const selectedSubject = ref('')
         href="mailto:png.not.foundd@gmail.com"
         class="font-medium group flex items-center gap-4 transition-all duration-300"
       >
-        <Mail class="w-6 h-6 transition-all duration-300 group-hover:text-pink-500 group-hover:-translate-y-1" />
-        <span class="transition-all duration-300 group-hover:text-pink-500 group-hover:translate-x-1">
+        <Mail class="w-6 h-6 transition-all duration-300 group-hover:text-[#f0b1c3] group-hover:-translate-y-1" />
+        <span class="transition-all duration-300 group-hover:text-[#f0b1c3] group-hover:translate-x-1">
           png.not.foundd@gmail.com
         </span>
       </a>

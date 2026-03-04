@@ -10,7 +10,6 @@ const route = useRoute()
 const router = useRouter()
 
 const previousArea = route.query.area as string | undefined
-const previousPage = route.query.page as string | undefined
 
 const work = computed(() => {
   const id = Number(route.params.id)
@@ -21,8 +20,7 @@ const goBack = () => {
   router.push({
     name: 'works',
     query: {
-    area: previousArea || 'todas',
-    page: previousPage || 1
+      area: previousArea || 'todas'
     }
   })
 }

@@ -10,9 +10,9 @@
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-12">
 
       <div>
-        <div class="flex items-center gap-3 mb-6">
+        <div class="flex items-center gap-3 mb-6 text-blue-800">
           <BookOpen class="w-6 h-6" />
-          <h2 class="text-2xl font-bold">Conocimientos</h2>
+          <h2 class="text-2xl font-bold ">Conocimientos</h2>
         </div>
 
         <ul class="space-y-3 text-gray-700">
@@ -27,7 +27,7 @@
       </div>
 
       <div>
-        <div class="flex items-center gap-3 mb-6">
+        <div class="flex items-center gap-3 mb-6 text-blue-800">
           <Monitor class="w-6 h-6" />
           <h2 class="text-2xl font-bold">Software</h2>
         </div>
@@ -144,7 +144,7 @@
       </div>
 
       <div>
-        <div class="flex items-center gap-3 mb-6">
+        <div class="flex items-center gap-3 mb-6 text-blue-800">
           <Globe class="w-6 h-6" />
           <h2 class="text-2xl font-bold">Idiomas</h2>
         </div>

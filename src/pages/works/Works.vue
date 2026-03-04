@@ -1,19 +1,16 @@
 <script setup lang="ts">
 import { ref, computed} from 'vue'
 import { works } from '@/data/works'
-import { Card, CardContent } from '@/components/ui/card'
 import { RouterLink } from 'vue-router'
 import { useRoute } from 'vue-router'
 
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination'
-
 const selectedArea = ref<'diseño' | string>('diseño')
+
+const route = useRoute()
+
+if (route.query.area) {
+  selectedArea.value = route.query.area as string
+}
 
 const filteredWorks = computed(() => {
   if (selectedArea.value === 'todas') {
@@ -22,34 +19,11 @@ const filteredWorks = computed(() => {
   return works.filter(work => work.area === selectedArea.value)
 })
 
-const itemsPerPage = 8
-const currentPage = ref(1)
-
-const totalPages = computed(() =>
-  Math.ceil(filteredWorks.value.length / itemsPerPage)
-)
-
-const paginatedWorks = computed(() => {
-  const start = (currentPage.value - 1) * itemsPerPage
-  const end = start + itemsPerPage
-  return filteredWorks.value.slice(start, end)
-})
-
-const route = useRoute()
-
-if (route.query.area) {
-  selectedArea.value = route.query.area as string
-}
-
-if (route.query.page) {
-  currentPage.value = Number(route.query.page)
-}
-
 </script>
 
 <template>
   <section 
-  class="px-6 py-12"
+  class="px-6 py-12 min-h-screen"
   style="background-image: url('/images/fondo.jpg')";>
 
     <h1 class="nombre text-7xl text-blue-800 mb-4">Trabajos</h1>
@@ -63,15 +37,18 @@ if (route.query.page) {
       :key="area"
       @click="selectedArea = area"
       class="px-4 py-2 border rounded-lg capitalize"
-      :class="selectedArea === area ? 'bg-black text-white' : ''"
+      :class="selectedArea === area ? 'bg-[#f0b1c3] text-white' 
+        : 'bg-white text-[#f0b1c3]'"
       >
       {{ area }}
     </button>
     
     <button
       @click="selectedArea = 'todas'"
-      class="px-4 py-2 border rounded-lg"
-      :class="selectedArea === 'todas' ? 'bg-black text-white' : ''"
+      class="px-4 py-2 rounded-lg transition-colors"
+      :class="selectedArea === 'todas' 
+        ? 'bg-[#f0b1c3] text-white' 
+        : 'bg-white text-[#f0b1c3]'"
     >
       Todas
     </button>
@@ -81,14 +58,13 @@ if (route.query.page) {
   <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
     
       <RouterLink
-        v-for="work in paginatedWorks"
+        v-for="work in filteredWorks"
         :key="work.id"
         :to="{
           name: 'work-detail',
           params: { id: work.id },
           query: {
             area: selectedArea,
-            page: currentPage
           }
         }"
         class="group relative overflow-hidden rounded-sm"
@@ -100,7 +76,7 @@ if (route.query.page) {
           :alt="work.title"
           class="
             w-full 
-            aspect-[4/5] 
+            aspect-4/5
             object-cover 
             transition-all 
             duration-500 
@@ -145,29 +121,6 @@ if (route.query.page) {
 
       </RouterLink>
     </div>
-
-    <Pagination
-  v-model:page="currentPage"
-  :itemsPerPage="itemsPerPage"
-  :total="filteredWorks.length"
-  class="mt-12 flex justify-center"
->
-  <PaginationContent>
-
-    <PaginationPrevious />
-
-    <PaginationItem
-      v-for="page in totalPages"
-      :key="page"
-      :value="page"
-    >
-      {{ page }}
-    </PaginationItem>
-
-    <PaginationNext />
-
-  </PaginationContent>
-</Pagination>
 
   </section>
 </template>

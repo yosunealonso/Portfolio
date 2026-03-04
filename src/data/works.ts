@@ -21,7 +21,13 @@ export const works: Work[] = [
       'fanzine2',
       'fanzine3',
       'fanzine4',
-      'fanzine5'
+      'fanzine5',
+      'fanzine6',
+      'fanzine7',
+      'fanzine8',
+      'fanzine9',
+      'fanzine10',
+      'fanzine11'
     ]
   },
   {

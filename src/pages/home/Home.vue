@@ -11,13 +11,13 @@ import { works } from '@/data/works'
     <div class="flex flex-col items-center justify-between h-full w-full pt-40 pb-10">
 
       <div class="text-center w-full">
-        <p class="portfolio block text-2xl text-blue-800 tracking-wide font-sans">
+        <p class="portfolio block text-2xl text-blue-800 tracking-wide font-sans hover:text-[#f0b1c3]">
           Portfolio de diseño e ilustración
         </p>
       </div>
 
       <div class="flex-1 flex items-center justify-center w-full">
-        <h1 class="nombre block text-[30vw] sm:text-[30vw] md:text-[20vw] leading-none text-blue-800 text-center hover:text-pink-200">
+        <h1 class="nombre block text-[30vw] sm:text-[30vw] md:text-[20vw] leading-none text-blue-800 text-center hover:text-[#f0b1c3]">
         Yosune Alonso
         </h1>
       </div>

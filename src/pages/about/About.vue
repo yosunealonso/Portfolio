@@ -16,16 +16,16 @@ style="background-image: url('/images/fondo.jpg');"">
       
       <RouterLink
         to="/about/bio"
-        class="text-gray-600 hover:text-black transition"
-        active-class="font-bold text-black border-b-2 border-black pb-1"
+        class="text-[#f0b1c3] hover:text-[#e3849f] transition"
+        active-class="font-bold border-b-2 border-[#e3849f] pb-1"
       >
         ¿Quién soy?
       </RouterLink>
 
       <RouterLink
         to="/about/skills"
-        class="text-gray-600 hover:text-black transition"
-        active-class="font-bold text-black border-b-2 border-black pb-1"
+        class="text-[#f0b1c3] hover:text-[#e3849f] transition"
+        active-class="font-bold text-[#e3849f] border-b-2 border-[#e3849f] pb-1"
       >
         Habilidades
       </RouterLink>

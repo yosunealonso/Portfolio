@@ -8,7 +8,7 @@ import { works } from '@/data/works'
     style="background-image: url('/images/fondo.jpg');"
   >
      
-    <div class="flex flex-col items-center justify-between h-full w-full pt-40 pb-10">
+    <div class="flex flex-col items-center justify-between h-full w-full pt-60 pb-30">
 
       <div class="text-center w-full">
         <p class="portfolio block text-2xl text-blue-800 tracking-wide font-sans hover:text-[#f0b1c3]">
@@ -17,7 +17,7 @@ import { works } from '@/data/works'
       </div>
 
       <div class="flex-1 flex items-center justify-center w-full">
-        <h1 class="nombre block text-[30vw] sm:text-[30vw] md:text-[20vw] leading-none text-blue-800 text-center hover:text-[#f0b1c3]">
+        <h1 class="nombre block text-[30vw] md:text-[20vw] leading-none text-blue-800 text-center hover:text-[#f0b1c3]">
         Yosune Alonso
         </h1>
       </div>
@@ -79,9 +79,8 @@ import { works } from '@/data/works'
 }
 
 .portfolio {
-  font-family: "arial", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "rotunda-variable",sans-serif;
+  font-variation-settings: 'wght' 400;
 }
 
 </style>

@@ -29,7 +29,7 @@ const goBack = () => {
 
 <template>
   <section 
-  class="px-6 py-12" v-if="work"
+  class="portfolio px-6 py-12" v-if="work"
   style="background-image: url('/images/fondo.jpg')";>
 
     <button
@@ -46,11 +46,11 @@ const goBack = () => {
 
       <div class="lg:w-1/2 flex flex-col justify-end pr-0 lg:pr-16 mb-12 lg:mb-0">
 
-        <h1 class="text-4xl lg:text-5xl font-bold mb-6">
+        <h1 class="nombre text-blue-800 text-6xl md:text-7xl lg:text-8xl font-bold mb-6 ">
             {{ work.title }}
           </h1>
 
-          <p class="text-gray-600 mb-6 leading-relaxed max-w-md">
+          <p class="text-gray-600 text-base md:text-lg lg:text-lg mb-6 leading-relaxed max-w-md">
             {{ work.description }}
           </p>
 
@@ -78,3 +78,18 @@ const goBack = () => {
     <h1 class="text-2xl">Proyecto no encontrado</h1>
   </section>
 </template>
+
+<style scoped>
+
+.nombre {
+  font-family: 'bookeyed-jack', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.portfolio {
+  font-family: "rotunda-variable",sans-serif;
+  font-variation-settings: 'wght' 400;
+}
+
+</style>

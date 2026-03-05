@@ -20,7 +20,7 @@ const selectedSubject = ref('')
 
 <template>
   <section 
-  class="px-6 py-12 min-h-screen flex flex-col"
+  class="portfolio px-6 py-12 min-h-screen flex flex-col"
   style="background-image: url('/images/fondo.jpg')";>
 
     <h1 class="nombre text-7xl text-blue-800 mb-4">Contacto</h1>
@@ -143,6 +143,11 @@ const selectedSubject = ref('')
   font-family: 'bookeyed-jack', sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.portfolio {
+  font-family: "rotunda-variable",sans-serif;
+  font-variation-settings: 'wght' 400;
 }
 
 </style>

@@ -1,12 +1,12 @@
 <template>
-   <section class=" px-0 py-0 max-w-6xl">
+   <section class=" portfolio px-0 py-0 max-w-6xl">
 
     <div class="items-start flex flex-col lg:flex-row gap-12">
 
       <!-- foto -->
       <div class="lg:w-1/2">
         <img
-          src="/images/mifoto.png"
+          src="/images/mifoto1.png"
           alt="Foto personal"
           class="w-full rounded-xl object-cover hover:scale-110 hover:rotate-3 transition"
         />
@@ -76,5 +76,10 @@
 </script>
 
 <style scoped>
+
+.portfolio {
+  font-family: "rotunda-variable",sans-serif;
+  font-variation-settings: 'wght' 400;
+}
 
 </style>

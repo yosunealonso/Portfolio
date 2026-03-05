@@ -23,7 +23,7 @@ const filteredWorks = computed(() => {
 
 <template>
   <section 
-  class="px-6 py-12 min-h-screen"
+  class="portfolio px-6 py-12 min-h-screen"
   style="background-image: url('/images/fondo.jpg')";>
 
     <h1 class="nombre text-7xl text-blue-800 mb-4">Trabajos</h1>
@@ -131,6 +131,11 @@ const filteredWorks = computed(() => {
   font-family: 'bookeyed-jack', sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.portfolio {
+  font-family: "rotunda-variable",sans-serif;
+  font-variation-settings: 'wght' 400;
 }
 
 </style>

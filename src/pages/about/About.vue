@@ -11,7 +11,7 @@ style="background-image: url('/images/fondo.jpg');"">
       Sobre mí
     </h1>
 
-    <div class="flex gap-6 border-b pb-4 mb-10">
+    <div class="portfolio text-lg flex gap-6 border-b pb-4 mb-10">
 
       
       <RouterLink
@@ -43,6 +43,11 @@ style="background-image: url('/images/fondo.jpg');"">
   font-family: 'bookeyed-jack', sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.portfolio {
+  font-family: "rotunda-variable",sans-serif;
+  font-variation-settings: 'wght' 400;
 }
 
 </style>

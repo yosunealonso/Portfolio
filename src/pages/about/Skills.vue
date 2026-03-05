@@ -7,7 +7,7 @@
     
   <section class="max-w-6xl">
 
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-12">
+    <div class="portfolio grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-12">
 
       <div>
         <div class="flex items-center gap-3 mb-6 text-blue-800">
@@ -163,5 +163,10 @@
 
 
 <style scoped>
+
+.portfolio {
+  font-family: "rotunda-variable",sans-serif;
+  font-variation-settings: 'wght' 400;
+}
 
 </style>

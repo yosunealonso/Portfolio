@@ -14,7 +14,7 @@ const closeMenu = () => {
 </script>
 
 <template>
-  <nav class="sticky top-0 z-50 w-full bg-white border-b">
+  <nav class="sticky top-0 z-50 w-full bg-white border-b ">
     <div class="flex justify-between items-center px-6 py-1">
 
         <RouterLink
@@ -23,15 +23,14 @@ const closeMenu = () => {
         </RouterLink>
 
       <!-- Menú Desktop -->
-      <div class="hidden md:flex gap-3">
+      <div class="portfolio hidden md:flex gap-3">
         <RouterLink
           to="/"
           @click="closeMenu"
           :class="[
-            'flex items-center gap-2 px-2 py-1.5 rounded text-base text-white transition',
+            'flex items-center gap-2 px-2 py-1.5 rounded text-sm text-white transition',
             route.path === '/' ? ' bg-blue-900' : 'font-normal bg-blue-700 hover:bg-blue-800'
           ]"
-          style="font-family: Arial, sans-serif"
         >
           Inicio
         </RouterLink>
@@ -40,10 +39,9 @@ const closeMenu = () => {
           to="/works"
           @click="closeMenu"
           :class="[
-            'flex items-center gap-2 px-3 py-1.5 rounded text-base text-white transition',
+            'flex items-center gap-2 px-3 py-1.5 rounded text-sm text-white transition',
             route.path.startsWith('/works') ? ' bg-blue-900' : 'font-normal bg-blue-700 hover:bg-blue-800'
           ]"
-          style="font-family: Arial, sans-serif"
         >
           Trabajos
         </RouterLink>
@@ -52,10 +50,9 @@ const closeMenu = () => {
           to="/about/bio"
           @click="closeMenu"
           :class="[
-            'flex items-center gap-2 px-3 py-1.5 rounded text-base text-white transition',
+            'flex items-center gap-2 px-3 py-1.5 rounded text-sm text-white transition',
             route.path.startsWith('/about/bio') ? ' bg-blue-800' : 'font-normal bg-blue-700 hover:bg-blue-800'
           ]"
-          style="font-family: Arial, sans-serif"
         >
           Sobre mí
         </RouterLink>
@@ -64,10 +61,9 @@ const closeMenu = () => {
           to="/contact"
           @click="closeMenu"
           :class="[
-            'flex items-center gap-2 px-3 py-1.5 rounded text-base text-white transition',
+            'flex items-center gap-2 px-3 py-1.5 rounded text-sm text-white transition',
             route.path.startsWith('/contact') ? ' bg-blue-800' : 'font-normal bg-blue-700 hover:bg-blue-800'
           ]"
-          style="font-family: Arial, sans-serif"
         >
           Contacto
         </RouterLink>
@@ -120,3 +116,12 @@ const closeMenu = () => {
     </div>
   </nav>
 </template>
+
+<style scoped>
+
+.portfolio {
+  font-family: "rotunda-variable",sans-serif;
+  font-variation-settings: 'wght' 400;
+}
+
+</style>

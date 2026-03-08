@@ -1,4 +1,4 @@
-export type Area = 'diseño' | 'ilustración' | 'proyectos' | 'arte'
+export type Area = 'diseño' | 'ilustración' | 'proyectos'
 
 export interface Work {
   id: number
@@ -10,11 +10,36 @@ export interface Work {
 }
 
 export const works: Work[] = [
+  
   {
     id: 1,
+    title: "Bichos",
+    description: "Ilustración de bichos realizada a partir de dibujos resultantes del reto mensual 'Febugary'",
+    area: "ilustración",
+    image: "/images/bichos.jpg",
+    images: [
+      'bichos1',
+      'bichos2'
+    ]
+  },
+  {
+    id: 2,
+    title: "Quererte fue una fiesta",
+    description: "Conjunto de ilustraciones para princesa",
+    area: "ilustración",
+    image: "/images/princesa.jpg",
+    images: [
+      'princesa1',
+      'princesa2',
+      'princesa3',
+      'princesa4'
+    ]
+  },
+  {
+    id: 3,
     title: "Fanzine Home Video",
     description: "Fanzine sobre el álbum 'Home Video' de Lucy Dacus",
-    area: "arte",
+    area: "ilustración",
     image: "/images/fanzine.jpg",
     images: [
       'fanzine1',
@@ -31,19 +56,29 @@ export const works: Work[] = [
     ]
   },
   {
-    id: 3,
-    title: "Cartel 'Pereza' ",
-    description: "Cartel para obra de teatro sobre los pecados capitales",
-    area: "diseño",
-    image: "/images/pereza.jpg",
+    id: 4,
+    title: "La niña que fui",
+    description: "Proyecto personal",
+    area: "ilustración",
+    image: "/images/nina.jpg",
     images: [
-      'pereza1',
-      'pereza2',
+      'nina1'
     ]
   },
   {
-    id: 4,
-    title: "Insoul",
+    id: 5,
+    title: "Ilustración conceptual",
+    description: "Ilustración conceptual y maquetación para un artículo de feminismo",
+    area: "ilustración",
+    image: "/images/conceptual.jpg",
+    images: [
+      'conceptual1',
+      'conceptual2'
+    ]
+  },
+  {
+    id: 6,
+    title: "In:soul",
     description: "Juego de mesa basado en la teoría de Carl Jung para tratar la salud mental",
     area: "proyectos",
     image: "/images/insoul.jpg",
@@ -53,24 +88,42 @@ export const works: Work[] = [
       'insoul3',
       'insoul4',
       'insoul5',
+      'insoul6',
+      'insoul7',
+      'insoul8',
+      'insoul9',
     ]
   },
   {
-    id: 2,
-    title: "Juntos Mejor",
-    description: "Campaña para cerrar las brechas intergenercionales",
-    area: "proyectos",
-    image: "/images/juntos.jpg",
+    id: 7,
+    title: "Sketchbook",
+    description: "Páginas de mi sketchbook personal",
+    area: "ilustración",
+    image: "/images/sketch.jpg",
     images: [
-      'juntos1',
-      'juntos1',
-      'juntos1',
-      'juntos1',
-      'juntos1',
+      'sketch1',
+      'sketch2',
+      'sketch3',
+      'sketch4',
+      'sketch5',
+      'sketch6'
     ]
   },
   {
-    id: 5,
+    id: 8,
+    title: "Cartel 'Pereza' ",
+    description: "Cartel para obra de teatro sobre los pecados capitales",
+    area: "diseño",
+    image: "/images/pereza.jpg",
+    images: [
+      'pereza1',
+      'pereza2',
+      'pereza3',
+      'pereza4'
+    ]
+  },
+  {
+    id: 9,
     title: "Ilustración Cien años de Soledad",
     description: "Reinterpretación ilustrada de la portada y páginas del libro 'Cien años de Soledad' de Gabriel García Marquez",
     area: "ilustración",
@@ -78,71 +131,23 @@ export const works: Work[] = [
     images: [
       'cien1',
       'cien2',
-      'cien3'
+      'cien3',
+      'cien4',
+      'cien5',
+      'cien6'
     ]
   },
   {
-    id: 6,
+    id: 10,
     title: "Odisea en el aeropuerto",
     description: "Cómic de dos páginas sobre una experiencia personal",
     area: "ilustración",
     image: "/images/comic.jpg",
     images: [
       'comic1',
-      'comic1',
-      'comic1',
-      'comic1',
+      'comic2',
+      'comic3',
+      'comic4',
     ]
-  },
-  {
-    id: 7,
-    title: "Cartel CREFAD",
-    description: "Cartel tipográfico para la CREFAD",
-    area: "diseño",
-    image: "/images/crefad.jpg",
-    images: [
-      'crefad1',
-      'crefad2'
-    ]
-  },
-  {
-    id: 8,
-    title: "Sketchbook",
-    description: "Páginas de mi sketchbook personal",
-    area: "arte",
-    image: "/images/sketch.jpg",
-    images: []
-  },
-  {
-    id: 9,
-    title: "Serie para princesa",
-    description: "Conjunto de ilustraciones para mi perrita",
-    area: "proyectos",
-    image: "/images/princesa.jpg",
-    images: []
-  },
-  {
-    id: 10,
-    title: "Bichos",
-    description: "Ilustraciones de bichos extraidas del reto mensual 'Febugary'",
-    area: "proyectos",
-    image: "/images/bichos.jpg",
-    images: []
-  },
-  {
-    id: 11,
-    title: "La niña que fui",
-    description: "Proyecto personal",
-    area: "arte",
-    image: "/images/nina.jpg",
-    images: []
-  },
-  {
-    id: 12,
-    title: "Ilustración conceptual",
-    description: "Ilustración sobre artículo de feminismo",
-    area: "ilustración",
-    image: "/images/conceptual.jpg",
-    images: []
   },
 ]

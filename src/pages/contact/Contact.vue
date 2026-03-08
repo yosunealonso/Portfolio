@@ -25,11 +25,17 @@ const selectedSubject = ref('')
 
     <h1 class="nombre text-7xl text-blue-800 mb-4">Contacto</h1>
 
-    <div class="flex flex-col-reverse lg:flex-row md:flex-col-reverse flex-1 gap-12 ">
+      <div class="text-lg">
+          <p>
+            Trabajemos juntxs!
+          </p>
+        </div>
+
+    <div class="flex flex-col lg:flex-row flex-1 gap-12 ">
 
       
       <!-- Columna izquierda -->
-      <div class="lg:w-1/2 flex flex-col lg:justify-end pb-12">
+      <div class="lg:w-1/2 flex flex-col lg:justify-end pb-12 pt-12 ">
         
         <div class="w-full md:max-w-xl lg:max-w-2xl ">
           <form class="space-y-6 bg-white p-8 rounded-2xl shadow-md transition-all duration-300 hover:shadow-xl">

@@ -1,5 +1,19 @@
 <script setup lang="ts">
-import { works } from '@/data/works'
+
+import { RouterLink } from 'vue-router'
+
+const carouselImages = [
+  'carrusel1',
+  'carrusel2',
+  'carrusel3',
+  'carrusel4',
+  'carrusel5',
+  'carrusel6',
+  'carrusel7',
+  'carrusel8',
+  'carrusel9',
+  'carrusel10'
+]
 </script>
 
 <template>
@@ -24,35 +38,39 @@ import { works } from '@/data/works'
 
     </div>
 
-    <div class="absolute bottom-0 w-full overflow-hidden bg-white/80 backdrop-blur-sm">
-      
-      <div class="marquee flex">
-        <div
-          v-for="work in works"
-          :key="'first-' + work.id"
-          class="aspect-3-4 shrink-0 w-40 lg:w-50"
-        >
-          <img
-            :src="work.image"
-            :alt="work.title"
-            class="w-full h-full object-cover"
-          />
-        </div>
+    <div class="absolute bottom-0 w-full overflow-hidden bg-white/80 backdrop-blur-sm border-blue-800">
+  
+  <div class="marquee flex">
 
-        <div
-          v-for="work in works"
-          :key="'second-' + work.id"
-          class="shrink-0"
-        >
-          <img
-            :src="work.image"
-            :alt="work.title"
-            class="h-40 w-auto object-cover"
-          />
-        </div>
+    <RouterLink
+      v-for="(image, index) in carouselImages"
+      :key="'first-' + index"
+      to="/works"
+      class="shrink-0 w-40 lg:h-50 "
+    >
+      <img
+        :src="`/images/${image}.jpg`"
+        :alt="image"
+        class="w-full h-full object-cover border border-blue-800"
+      />
+    </RouterLink>
 
-      </div>
-    </div>
+    <RouterLink
+      v-for="(image, index) in carouselImages"
+      :key="'second-' + index"
+      to="/works"
+      class="shrink-0 w-40 lg:h-50"
+    >
+      <img
+        :src="`/images/${image}.jpg`"
+        :alt="image"
+        class="w-full h-full object-cover border border-blue-800 "
+      />
+    </RouterLink>
+
+  </div>
+
+</div>
 
   </section>
 </template>

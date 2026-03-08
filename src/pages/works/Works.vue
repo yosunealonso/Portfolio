@@ -4,7 +4,7 @@ import { works } from '@/data/works'
 import { RouterLink } from 'vue-router'
 import { useRoute } from 'vue-router'
 
-const selectedArea = ref<'diseño' | string>('diseño')
+const selectedArea = ref<'ilustración' | string>('ilustración')
 
 const route = useRoute()
 
@@ -31,18 +31,16 @@ const filteredWorks = computed(() => {
     <!-- Filtros -->
     <div class="flex flex-wrap gap-4 mb-10">
 
-      
       <button
-      v-for="area in ['diseño','ilustración','proyectos','arte']"
+      v-for="area in ['ilustración','diseño','proyectos']"
       :key="area"
       @click="selectedArea = area"
-      class="px-4 py-2 border rounded-lg capitalize"
+      class="px-4 py-2 rounded-lg capitalize"
       :class="selectedArea === area ? 'bg-[#f0b1c3] text-white' 
         : 'bg-white text-[#f0b1c3]'"
       >
       {{ area }}
     </button>
-    
     <button
       @click="selectedArea = 'todas'"
       class="px-4 py-2 rounded-lg transition-colors"
@@ -52,6 +50,7 @@ const filteredWorks = computed(() => {
     >
       Todas
     </button>
+    
   </div>
   
   <!-- Grid -->
@@ -91,7 +90,7 @@ const filteredWorks = computed(() => {
             bg-black/0 
             transition-all 
             duration-500 
-            group-hover:bg-black/60
+            group-hover:bg-white
           "
         ></div>
 
@@ -110,11 +109,11 @@ const filteredWorks = computed(() => {
             group-hover:opacity-100
           "
         >
-          <h2 class="text-white text-lg font-semibold">
+          <h2 class="text-blue-800 text-lg font-semibold">
             {{ work.title }}
           </h2>
 
-          <p class="text-white text-sm mt-2">
+          <p class="text-blue-800 text-sm mt-2">
             {{ work.description }}
           </p>
         </div>

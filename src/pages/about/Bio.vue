@@ -23,7 +23,7 @@
             <p>
               Soy Yosune - una estudiante de diseño interesada en la identidad visual,
               la ilustración, el diseño gráfico y las artes visuales. Me apasiona la dirección 
-              de arte y el diseño relacionado con la industria musical, y me encantaría trabajar 
+              de arte y el diseño relacionado con la industria musical, por ello me encantaría trabajar 
               en este campo.
             </p>
           </div>
@@ -31,7 +31,7 @@
           <div>
             <h2 class="text-2xl font-bold mb-3 text-blue-800">Educación</h2>
             <p>
-              Actualmente estudio segundo año de Diseño y Tecnologías Creativas
+              Actualmente estudio segundo año del grado en Diseño y Tecnologías Creativas
               en la Universitat Politècnica de València.
               A lo largo de la carrera he podido explorar múltiples áreas del diseño como:
               Teoría del color, dibujo técnico y anatómico, ilustración aplicada a múltiples contextos,
@@ -44,7 +44,7 @@
 
         <!-- mapas -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="w-full aspect-[16/9] lg:aspect-[4/3]">
+          <div class="w-full aspect-video lg:aspect-4/3">
             <!-- Valencia -->
             <iframe
             class="w-full h-full rounded-xl"
@@ -53,7 +53,7 @@
           </iframe>
         </div>
 
-        <div class="w-full aspect-[16/9] lg:aspect-[4/3]">
+        <div class="w-full aspect-video lg:aspect-4/3">
           <!-- Bogotá -->
           <iframe
           class="w-full h-full rounded-xl"

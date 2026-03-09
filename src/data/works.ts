@@ -13,7 +13,7 @@ export const works: Work[] = [
   
   {
     id: 1,
-    title: "Bichos",
+    title: "Love the unloved",
     description: "Ilustración de bichos realizada a partir de dibujos resultantes del reto mensual 'Febugary'",
     area: "ilustración",
     image: "/images/bichos.jpg",
@@ -57,11 +57,17 @@ export const works: Work[] = [
   },
   {
     id: 4,
-    title: "La niña que fui",
-    description: "Proyecto personal",
+    title: "Prints de ilustraciones",
+    description: "Prints realizados a partir de ilustraciones personales",
     area: "ilustración",
-    image: "/images/nina.jpg",
+    image: "/images/prints.jpg",
     images: [
+      'prints3',
+      'prints4',
+      'prints5',
+      'prints6',
+      'prints1',
+      'prints2',
       'nina1'
     ]
   },
@@ -96,21 +102,6 @@ export const works: Work[] = [
   },
   {
     id: 7,
-    title: "Sketchbook",
-    description: "Páginas de mi sketchbook personal",
-    area: "ilustración",
-    image: "/images/sketch.jpg",
-    images: [
-      'sketch1',
-      'sketch2',
-      'sketch3',
-      'sketch4',
-      'sketch5',
-      'sketch6'
-    ]
-  },
-  {
-    id: 8,
     title: "Cartel 'Pereza' ",
     description: "Cartel para obra de teatro sobre los pecados capitales",
     area: "diseño",
@@ -120,6 +111,21 @@ export const works: Work[] = [
       'pereza2',
       'pereza3',
       'pereza4'
+    ]
+  },
+  {
+    id: 8,
+    title: "Retratos virgen",
+    description: "Serie de retratos artísticos inspirados en las virgenes católicas",
+    area: "proyectos",
+    image: "/images/retrato.jpg",
+    images: [
+      'retrato1',
+      'retrato2',
+      'retrato3',
+      'retrato4',
+      'retrato5',
+      'retrato6',
     ]
   },
   {
@@ -134,7 +140,10 @@ export const works: Work[] = [
       'cien3',
       'cien4',
       'cien5',
-      'cien6'
+      'cien6',
+      'cien7',
+      'cien8',
+      'cien9',
     ]
   },
   {
@@ -146,8 +155,37 @@ export const works: Work[] = [
     images: [
       'comic1',
       'comic2',
-      'comic3',
-      'comic4',
+      'comic3'
     ]
   },
+  {
+    id: 11,
+    title: "Sketchbook",
+    description: "Páginas de mi sketchbook personal",
+    area: "ilustración",
+    image: "/images/sketch.jpg",
+    images: [
+      'sketch1',
+      'sketch2',
+      'sketch3',
+      'sketch4',
+      'sketch5',
+      'sketch6',
+      'sketch7',
+      'sketch8',
+      'sketch9',
+      'sketch10'
+    ]
+  },
+  {
+    id: 12,
+    title: "Posters de Boygenius",
+    description: "Diseño de posters de la canción True Blue de la banda Boygenius",
+    area: "diseño",
+    image: "/images/boy.jpg",
+    images: [
+      'boy1',
+      'boy2'
+    ]
+  }
 ]

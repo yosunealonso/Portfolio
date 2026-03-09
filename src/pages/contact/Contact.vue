@@ -118,7 +118,7 @@ const selectedSubject = ref('')
         target="_blank"
         class="font-medium group flex items-center gap-4 transition-all duration-300"
       >
-        <div class="w-6 h-6 flex items-center justify-center border rounded text-sm font-bold transition-all duration-300 group-hover:text-[#f0b1c3] group-hover:-translate-y-1">
+        <div class="w-6 h-6 flex items-center justify-center border-2 border-black rounded text-sm font-bold transition-all duration-300 group-hover:text-[#f0b1c3] group-hover:border-[#f0b1c3] group-hover:-translate-y-1">
           Be
         </div>
         <span class="transition-all duration-300 group-hover:text-[#f0b1c3] group-hover:translate-x-1">

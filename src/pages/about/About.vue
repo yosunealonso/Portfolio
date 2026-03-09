@@ -11,7 +11,7 @@ style="background-image: url('/images/fondo.jpg');"">
       Sobre mí
     </h1>
 
-    <div class="portfolio text-lg flex gap-6 border-b pb-4 mb-10">
+    <div class="portfolio text-lg flex gap-6 pb-4 mb-10">
 
       
       <RouterLink

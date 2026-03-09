@@ -68,6 +68,19 @@ const carouselImages = [
       />
     </RouterLink>
 
+    <RouterLink
+      v-for="(image, index) in carouselImages"
+      :key="'second-' + index"
+      to="/works"
+      class="shrink-0 w-40 lg:h-50"
+    >
+      <img
+        :src="`/images/${image}.jpg`"
+        :alt="image"
+        class="w-full h-full object-cover border border-blue-800 "
+      />
+    </RouterLink>
+
   </div>
 
 </div>

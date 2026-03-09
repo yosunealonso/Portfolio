@@ -124,5 +124,11 @@
     cursor: url('/images/cursor-pointer.png') 16 16, pointer;
     }
 
+    input,
+    textarea,
+    [contenteditable="true"] {
+      cursor: url("/images/text-cursor.png") 16 16, text;
+    }
+
   }
 }

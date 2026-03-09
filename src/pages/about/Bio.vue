@@ -1,3 +1,15 @@
+<script setup lang="ts">
+
+import { ref } from "vue"
+
+const bagOpen = ref(false)
+
+const toggleBag = () => {
+  bagOpen.value = !bagOpen.value
+}
+
+</script>
+
 <template>
    <section class=" portfolio px-0 py-0 max-w-6xl">
 
@@ -71,9 +83,6 @@
   </section>
 </template>
 
-<script setup lang="ts">
-
-</script>
 
 <style scoped>
 

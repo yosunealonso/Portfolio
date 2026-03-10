@@ -1,5 +1,9 @@
 export type Area = 'diseño' | 'ilustración' | 'proyectos'
 
+export type Block =
+  | { type: "text"; content: string }
+  | { type: "canva"; url: string }
+
 export interface Work {
   id: number
   title: string
@@ -7,6 +11,7 @@ export interface Work {
   area: Area
   image: string
   images: string[]
+  blocks?: Block[]
 }
 
 export const works: Work[] = [
@@ -20,8 +25,19 @@ export const works: Work[] = [
     images: [
       'bichos1',
       'bichos2'
+    ],
+    blocks: [
+    {
+      type: "text",
+      content: "Bocetos previos"
+    },
+    {
+      type: "canva",
+      url: "https://www.canva.com/design/DAHDkqcTv08/23pYUI7i6XH3ElCxp0vJXQ/view?embed"
+    }
     ]
   },
+
   {
     id: 2,
     title: "Quererte fue una fiesta",
@@ -33,8 +49,19 @@ export const works: Work[] = [
       'princesa2',
       'princesa3',
       'princesa4'
+    ],
+    blocks: [
+    {
+      type: "text",
+      content: "Video final"
+    },
+    {
+      type: "canva",
+      url: "https://www.canva.com/design/DAHDkiIQCqE/tuk8pF2_Ip3QI13kkqQm5g/watch?embed"
+    }
     ]
   },
+
   {
     id: 3,
     title: "Fanzine Home Video",
@@ -53,8 +80,19 @@ export const works: Work[] = [
       'fanzine9',
       'fanzine10',
       'fanzine11'
+    ],
+    blocks: [
+    {
+      type: "text",
+      content: "Proceso"
+    },
+    {
+      type: "canva",
+      url: "https://www.canva.com/design/DAHDkyUwyD8/I7w__GFOwnSj-TqXfdxYHA/watch?embed"
+    }
     ]
   },
+
   {
     id: 4,
     title: "Prints de ilustraciones",
@@ -80,6 +118,16 @@ export const works: Work[] = [
     images: [
       'conceptual1',
       'conceptual2'
+    ],
+    blocks: [
+    {
+      type: "text",
+      content: "Proceso"
+    },
+    {
+      type: "canva",
+      url: "https://www.canva.com/design/DAHDk_yZnsA/wxmxlHkZtEpatGUicqYi-w/view?embed"
+    }
     ]
   },
   {
@@ -98,8 +146,20 @@ export const works: Work[] = [
       'insoul7',
       'insoul8',
       'insoul9',
+    ],
+
+    blocks: [
+    {
+      type: "text",
+      content: "Proceso de diseño"
+    },
+    {
+      type: "canva",
+      url: "https://www.canva.com/design/DAGoGyJG6eU/6159Zo3RZGIjO4iz-aTRPQ/view?embed"
+    }
     ]
   },
+
   {
     id: 7,
     title: "Cartel 'Pereza' ",
@@ -113,6 +173,7 @@ export const works: Work[] = [
       'pereza4'
     ]
   },
+
   {
     id: 8,
     title: "Retratos virgen",
@@ -128,6 +189,7 @@ export const works: Work[] = [
       'retrato6',
     ]
   },
+
   {
     id: 9,
     title: "Ilustración Cien años de Soledad",
@@ -144,8 +206,19 @@ export const works: Work[] = [
       'cien7',
       'cien8',
       'cien9',
+    ],
+    blocks: [
+    {
+      type: "text",
+      content: "Proceso"
+    },
+    {
+      type: "canva",
+      url: "https://www.canva.com/design/DAHDkxJF7_Q/bnnPzt_MeiV-HUIG92mq5w/view?embed"
+    }
     ]
   },
+
   {
     id: 10,
     title: "Odisea en el aeropuerto",
@@ -156,6 +229,16 @@ export const works: Work[] = [
       'comic1',
       'comic2',
       'comic3'
+    ],
+    blocks: [
+    {
+      type: "text",
+      content: "Proceso"
+    },
+    {
+      type: "canva",
+      url: "https://www.canva.com/design/DAHDk3Msb3Q/oSNLUBIarj9mzuXZcI9iWA/view?embed"
+    }
     ]
   },
   {
@@ -186,6 +269,32 @@ export const works: Work[] = [
     images: [
       'boy1',
       'boy2'
+    ]
+  },
+
+  {
+    id: 13,
+    title: "Esculturas - Colaboración So Youn Lee x Yadró",
+    description: "Esculturas de talla y modelado para colaboración ficticia entre la artista coreana So Youn Lee y la marca de esculturas Yadró",
+    area: "proyectos",
+    image: "/images/vol.jpg",
+    images: [
+      'vol1',
+      'vol2',
+      'vol3',
+      'vol4',
+      'vol6',
+      'vol7',
+    ],
+    blocks: [
+    {
+      type: "text",
+      content: "Proceso"
+    },
+    {
+      type: "canva",
+      url: "https://www.canva.com/design/DAGio_psC_g/2xkWy_PWJa5NuLoq6IjTWg/view?embed"
+    }
     ]
   }
 ]

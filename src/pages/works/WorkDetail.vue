@@ -72,6 +72,32 @@ const goBack = () => {
 
     </div>
 
+    <div v-if="work.blocks" class="max-w-7xl mx-auto mt-20 space-y-10">
+
+  <div v-for="(block, index) in work.blocks" :key="index">
+
+    <!-- TEXTO -->
+    <div v-if="block.type === 'text'" class="max-w-3xl">
+      <p class="text-blue-800 text-2xl">
+        {{ block.content }}
+      </p>
+    </div>
+
+    <!-- CANVA -->
+    <div v-if="block.type === 'canva'" class="w-full flex justify-start">
+
+      <iframe
+        :src="block.url"
+        class="w-full max-w-7xl aspect-video rounded-xl border-0"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+
+    </div>
+      </div>
+
+    </div>
+
     </section>
 
   <section v-else class="p-12">

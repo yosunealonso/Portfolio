@@ -43,8 +43,12 @@ const props = defineProps<Props>()
 
     </CarouselContent>
 
-    <CarouselPrevious />
-    <CarouselNext />
+    <CarouselPrevious 
+    class="left-2 md:-left-12"
+    />
+    <CarouselNext 
+    class="right-2 md:-right-12"
+    />
 
   </Carousel>
 </template>

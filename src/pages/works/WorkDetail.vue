@@ -1,26 +1,24 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
-import { works } from '@/data/works'
-import { computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import WorkCarousel from '@/components/WorkCarousel.vue'
-import { useRouter } from 'vue-router'
-import { ArrowLeft } from 'lucide-vue-next'
+import { ArrowLeft, Instagram, Music2 } from 'lucide-vue-next'
+import { useWorks } from "@/composables/useWorks"
 
 const route = useRoute()
 const router = useRouter()
 
-const previousArea = route.query.area as string | undefined
+const { getWorkById } = useWorks()
 
-const work = computed(() => {
-  const id = Number(route.params.id)
-  return works.find(w => w.id === id)
-})
+const work = getWorkById(String(route.params.id))
+
+
+const previousArea = route.query.area as string | undefined
 
 const goBack = () => {
   router.push({
-    name: 'works',
+    name: "works",
     query: {
-      area: previousArea || 'todas'
+      area: previousArea || "todas"
     }
   })
 }
@@ -92,8 +90,31 @@ const goBack = () => {
         allowfullscreen
         loading="lazy"
       ></iframe>
-
     </div>
+
+    <!-- SOCIAL -->
+    <div v-if="block.type === 'social'" class="flex flex-col gap-4 max-w-md">
+      <a
+        v-if="block.instagram"
+        :href="block.instagram"
+        target="_blank"
+        class="flex items-center gap-2 text-blue-800 hover:text-blue-600 font-semibold"
+      >
+        <Instagram class="w-5 h-5" />
+        Míralo en Instagram
+      </a>
+
+      <a
+        v-if="block.tiktok"
+        :href="block.tiktok"
+        target="_blank"
+        class="flex items-center gap-2 text-blue-800 hover:text-blue-600 font-semibold"
+      >
+        <music2 class="w-5 h-5" />
+        Míralo en TikTok
+      </a>
+    </div>
+
       </div>
 
     </div>

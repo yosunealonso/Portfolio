@@ -3,6 +3,7 @@ export type Area = 'diseño' | 'ilustración' | 'proyectos'
 export type Block =
   | { type: "text"; content: string }
   | { type: "canva"; url: string }
+  | { type: "social"; instagram?: string; tiktok?: string }
 
 export interface Work {
   id: number
@@ -34,6 +35,10 @@ export const works: Work[] = [
     {
       type: "canva",
       url: "https://www.canva.com/design/DAHDkqcTv08/23pYUI7i6XH3ElCxp0vJXQ/view?embed"
+    },
+    { type: "social", 
+      instagram: "https://www.instagram.com/p/DVk-30JiOpn/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", 
+      tiktok: "https://www.tiktok.com/@png.not.found/photo/7614450679893036311" 
     }
     ]
   },
@@ -58,6 +63,10 @@ export const works: Work[] = [
     {
       type: "canva",
       url: "https://www.canva.com/design/DAHDkiIQCqE/tuk8pF2_Ip3QI13kkqQm5g/watch?embed"
+    },
+    { type: "social", 
+      instagram: "https://www.instagram.com/reel/DUIm7sBCH0D/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", 
+      tiktok: "https://www.tiktok.com/@png.not.found/video/7601166828055891222" 
     }
     ]
   },
@@ -89,6 +98,10 @@ export const works: Work[] = [
     {
       type: "canva",
       url: "https://www.canva.com/design/DAHDkyUwyD8/I7w__GFOwnSj-TqXfdxYHA/watch?embed"
+    },
+    { type: "social", 
+      instagram: "https://www.instagram.com/p/DLtFIrNONay/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", 
+      tiktok: "https://www.tiktok.com/@png.not.found/video/7532886480629320982" 
     }
     ]
   },
@@ -109,6 +122,7 @@ export const works: Work[] = [
       'nina1'
     ]
   },
+
   {
     id: 5,
     title: "Ilustración conceptual",
@@ -130,6 +144,7 @@ export const works: Work[] = [
     }
     ]
   },
+
   {
     id: 6,
     title: "In:soul",
@@ -156,6 +171,9 @@ export const works: Work[] = [
     {
       type: "canva",
       url: "https://www.canva.com/design/DAGoGyJG6eU/6159Zo3RZGIjO4iz-aTRPQ/view?embed"
+    },
+    { type: "social", 
+      instagram: "https://www.instagram.com/p/DN00e9E2AWM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     }
     ]
   },
@@ -238,9 +256,13 @@ export const works: Work[] = [
     {
       type: "canva",
       url: "https://www.canva.com/design/DAHDk3Msb3Q/oSNLUBIarj9mzuXZcI9iWA/view?embed"
+    },
+    { type: "social", 
+      instagram: "https://www.instagram.com/p/DQ40l8JiGmH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", 
     }
     ]
   },
+
   {
     id: 11,
     title: "Sketchbook",
@@ -260,6 +282,7 @@ export const works: Work[] = [
       'sketch10'
     ]
   },
+
   {
     id: 12,
     title: "Posters de Boygenius",

@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { ref, computed} from 'vue'
-import { works } from '@/data/works'
-import { RouterLink } from 'vue-router'
-import { useRoute } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 
-const selectedArea = ref<'ilustración' | string>('ilustración')
+import { useWorks } from "@/composables/useWorks"
+
+const { workList } = useWorks()
+
+const selectedArea = ref<string>('ilustración')
 
 const route = useRoute()
 
@@ -14,9 +16,10 @@ if (route.query.area) {
 
 const filteredWorks = computed(() => {
   if (selectedArea.value === 'todas') {
-    return works
+    return workList.value
   }
-  return works.filter(work => work.area === selectedArea.value)
+
+  return workList.value.filter(work => work.area === selectedArea.value)
 })
 
 </script>

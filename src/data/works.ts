@@ -297,8 +297,8 @@ export const works: Work[] = [
 
   {
     id: 13,
-    title: "Esculturas - Colaboración So Youn Lee x Yadró",
-    description: "Esculturas de talla y modelado para colaboración ficticia entre la artista coreana So Youn Lee y la marca de esculturas Yadró",
+    title: "Esculturas - Colaboración So Youn Lee x Lladró",
+    description: "Esculturas de talla y modelado para colaboración ficticia entre la artista coreana So Youn Lee y la marca de esculturas Lladró",
     area: "proyectos",
     image: "/images/vol.jpg",
     images: [

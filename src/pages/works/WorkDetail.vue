@@ -98,7 +98,7 @@ const goBack = () => {
         v-if="block.instagram"
         :href="block.instagram"
         target="_blank"
-        class="flex items-center gap-2 text-blue-800 hover:text-blue-600 font-semibold"
+        class="flex items-center gap-2 text-blue-800 hover:text-[#f0b1c3] font-semibold"
       >
         <Instagram class="w-5 h-5" />
         Míralo en Instagram
@@ -108,7 +108,7 @@ const goBack = () => {
         v-if="block.tiktok"
         :href="block.tiktok"
         target="_blank"
-        class="flex items-center gap-2 text-blue-800 hover:text-blue-600 font-semibold"
+        class="flex items-center gap-2 text-blue-800 hover:text-[#f0b1c3] font-semibold"
       >
         <music2 class="w-5 h-5" />
         Míralo en TikTok
